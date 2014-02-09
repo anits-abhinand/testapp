@@ -1,14 +1,13 @@
-var express = require('express');
-var app = express();
-var path = require('path');
 
-var clientDir = path.join(__dirname, 'client');
+var http = require('http'),
+    fs = require('fs');
 
 
-    res.sendfile('client/index.html');
-
-app.configure ( function() {
-	app.use(express.favicon());
-    app.use(express.logger('dev'));
-	app.use(express.static(clientDir));
-}
+fs.readFile('client/index.html', function (err, html) {
+    if (err) {
+        throw err; 
+    }         
+        response.writeHeader(200, {"Content-Type": "text/html"});  
+        response.write(html);  
+        response.end();  
+	});
