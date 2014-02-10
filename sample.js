@@ -5,8 +5,8 @@ var http = require('http');
 var on_contents = function(cb) {
         var httpRequestParams = 
         {
-            host: "stackoverflow.com",
-            port: 80,
+            host: "https://raw.github.com/anits-abhinand/testapp/master/helloworld.html",
+            port: 443,
             path: "/?"
         };
 
