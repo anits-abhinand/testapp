@@ -1,7 +1,31 @@
-require('https').get({ host: 'https://rawgithub.com/tjanczuk/haiku-http/master/samples/haikus/mongo.js' }, function (bres) {
-    res.writeHead(bres.statusCode)
-    bres.pipe(res)
-}).on('error', function (err) {
-    res.writeHead(500)
-    res.end('Error talking to backend: ' + err)
-})
+
+var on_contents = function(cb) {
+        var httpRequestParams = 
+        {
+            host: "google.com",
+            port: 80,
+            path: "/?"
+        };
+
+        var req = http.get(httpRequestParams, function(res) 
+        {
+            var data = '';
+            res.on('data', function(chunk) {
+                data += chunk.toString();
+            });
+
+            res.on('end', function(){
+                cb(data);
+            });
+
+            console.log(data);
+        }).end();
+
+    }
+
+    function onFinish(data) {
+    console.log(data);
+
+    }
+
+    on_contents(onFinish)
