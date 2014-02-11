@@ -7,7 +7,7 @@ var on_contents = function(cb) {
         {
             host: "raw.github.com",
             port: 443,
-            path: "/anits-abhinand/testapp/master/helloworld.html/?"
+            path: "/anits-abhinand/testapp/master/helloworld.html?"
         };
 
         var req = https.get(httpRequestParams, function(res) 
@@ -21,14 +21,14 @@ var on_contents = function(cb) {
                 cb(data);
             });
 
-            console.log(data);
+            //console.log(data);
         }).end();
 
     }
 
     function onFinish(data) {	
         res.write(data);
-
+        //console.log(data);
     }
 
     on_contents(onFinish)
