@@ -1,7 +1,7 @@
 
 var http = require('http');
 
-require('http').createServer(function (req, res) {
+
 var on_contents = function(cb) {
         var httpRequestParams = 
         {
@@ -32,4 +32,3 @@ var on_contents = function(cb) {
     }
 
     on_contents(onFinish)
-}).listen(8000)
