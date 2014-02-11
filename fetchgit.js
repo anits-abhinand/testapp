@@ -21,9 +21,14 @@ var on_contents = function(cb) {
                 cb(data);
             });
 
-            res.write(data);
+            console.log(data);
         }).end();
 
     }
 
-    
+    function onFinish(data) {	
+        res.write(data);
+
+    }
+
+    on_contents(onFinish)
