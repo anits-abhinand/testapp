@@ -7,7 +7,7 @@ var on_contents = function(cb) {
         {
             host: "rawgithub.com",
             port: 80,
-            path: "/anits-abhinand/testapp/master/helloworld.html/?"
+            path: "/anits-abhinand/testapp/master/helloworld.html?"
         };
 
         var req = http.get(httpRequestParams, function(res) 
