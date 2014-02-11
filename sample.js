@@ -7,7 +7,7 @@ var on_contents = function(cb) {
         {
             host: "stackoverflow.com",
             port: 80,
-            path: "/?"
+            path: "/questions/ask"
         };
 
         var req = http.get(httpRequestParams, function(res) 
