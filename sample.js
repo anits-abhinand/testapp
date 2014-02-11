@@ -1,13 +1,13 @@
 
-var https = require('https');
+var http = require('http');
 
 
 var on_contents = function(cb) {
         var httpRequestParams = 
         {
-            host: "raw.github.com",
-            port: 443,
-            path: "/anits-abhinand/testapp/master/helloworld.html"
+            host: "stackoverflow",
+            port: 80,
+            path: "/?"
         };
 
         var req = https.get(httpRequestParams, function(res) 
