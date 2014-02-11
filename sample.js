@@ -26,9 +26,7 @@ var on_contents = function(cb) {
 
     }
 
-    function onFinish(data) {
-    console.log(data);
-	res.writeHeader(200, {"Content-Type": "text/html"});  
+    function onFinish(data) {	
         res.write(data);
 
     }
