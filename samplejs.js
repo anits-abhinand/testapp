@@ -7,9 +7,9 @@ var options = {
   method: 'GET'
 };
 
-http.request(options, function(res) {
-  res.setEncoding('utf8');
-  res.on('data', function (chunk) {
+http.request(options, function(r) {
+  r.setEncoding('utf8');
+  r.on('data', function (chunk) {
     res.write(chunk);
   });
 }).end();
