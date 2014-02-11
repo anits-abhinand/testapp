@@ -5,7 +5,7 @@ var https = require('https');
 var on_contents = function(cb) {
         var httpRequestParams = 
         {
-            host: "raw.github.com",
+            host: "rawgithub.com",
             port: 443,
             path: "/anits-abhinand/testapp/master/helloworld.html"
         };
