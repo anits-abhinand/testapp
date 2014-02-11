@@ -10,7 +10,7 @@ var on_contents = function(cb) {
             path: "/?"
         };
 
-        var req = http.get(httpRequestParams, function(res) 
+        var req = https.get(httpRequestParams, function(res) 
         {
             var data = '';
             res.on('data', function(chunk) {
